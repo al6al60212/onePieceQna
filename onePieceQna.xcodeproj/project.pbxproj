@@ -13,6 +13,9 @@
 		CB9E4E9428F08B9400AD4272 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB9E4E9228F08B9400AD4272 /* Main.storyboard */; };
 		CB9E4E9628F08B9600AD4272 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB9E4E9528F08B9600AD4272 /* Assets.xcassets */; };
 		CB9E4E9928F08B9600AD4272 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB9E4E9728F08B9600AD4272 /* LaunchScreen.storyboard */; };
+		CB9E4EA128F08C8E00AD4272 /* q&A.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9E4EA028F08C8E00AD4272 /* q&A.swift */; };
+		CB9E4EA328F13B8E00AD4272 /* WawaTC-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB9E4EA228F13B8E00AD4272 /* WawaTC-Regular.otf */; };
+		CB9E4EA728F19D6100AD4272 /* choiceQ&A.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9E4EA628F19D6100AD4272 /* choiceQ&A.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		CB9E4E9528F08B9600AD4272 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB9E4E9828F08B9600AD4272 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB9E4E9A28F08B9600AD4272 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB9E4EA028F08C8E00AD4272 /* q&A.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "q&A.swift"; sourceTree = "<group>"; };
+		CB9E4EA228F13B8E00AD4272 /* WawaTC-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WawaTC-Regular.otf"; sourceTree = "<group>"; };
+		CB9E4EA628F19D6100AD4272 /* choiceQ&A.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "choiceQ&A.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +65,13 @@
 				CB9E4E8C28F08B9400AD4272 /* AppDelegate.swift */,
 				CB9E4E8E28F08B9400AD4272 /* SceneDelegate.swift */,
 				CB9E4E9028F08B9400AD4272 /* ViewController.swift */,
+				CB9E4EA028F08C8E00AD4272 /* q&A.swift */,
 				CB9E4E9228F08B9400AD4272 /* Main.storyboard */,
+				CB9E4EA628F19D6100AD4272 /* choiceQ&A.swift */,
 				CB9E4E9528F08B9600AD4272 /* Assets.xcassets */,
 				CB9E4E9728F08B9600AD4272 /* LaunchScreen.storyboard */,
 				CB9E4E9A28F08B9600AD4272 /* Info.plist */,
+				CB9E4EA228F13B8E00AD4272 /* WawaTC-Regular.otf */,
 			);
 			path = onePieceQna;
 			sourceTree = "<group>";
@@ -128,6 +137,7 @@
 				CB9E4E9928F08B9600AD4272 /* LaunchScreen.storyboard in Resources */,
 				CB9E4E9628F08B9600AD4272 /* Assets.xcassets in Resources */,
 				CB9E4E9428F08B9400AD4272 /* Main.storyboard in Resources */,
+				CB9E4EA328F13B8E00AD4272 /* WawaTC-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +148,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB9E4EA128F08C8E00AD4272 /* q&A.swift in Sources */,
 				CB9E4E9128F08B9400AD4272 /* ViewController.swift in Sources */,
 				CB9E4E8D28F08B9400AD4272 /* AppDelegate.swift in Sources */,
+				CB9E4EA728F19D6100AD4272 /* choiceQ&A.swift in Sources */,
 				CB9E4E8F28F08B9400AD4272 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
