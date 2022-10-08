@@ -14,9 +14,12 @@ class choiceQ_A: UIViewController {
     @IBOutlet var optionBtns: [UIButton]!
     
     @IBOutlet weak var questionLable: UILabel!
+    //用來儲存題目
     var questions = [ChoiceQA]()
     var i = 0
+    //用來儲存分數
     var score = 0
+    //用來記錄連續答對題數
     var rightCount = 0
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,30 +50,26 @@ class choiceQ_A: UIViewController {
         let question12 = ChoiceQA(description: "佛朗基用寶樹亞當建造的船叫什麼？", ans: "千陽號", options: ["黃金梅利號", "千陽號", "亞當號", "前進魯夫號"])
         questions.append(question12)
         
-        /*questions.shuffle()
-        numberOfQuestionLable.text = "\(i + 1)/10"
         
-        scoreLable.text = "總分：\(score)"
-        questionLable.text = questions[i].description
-        questions[i].options.shuffle()
-        for j in 0...3{
-            optionBtns[j].setTitle(questions[i].options[j], for: .normal)*/
         replay()
-        
-        
     }
-    
+    //下一題的Function
     func nextQuestion(){
+        //題目有12題取10題
         if i + 1 < 10 {
+            //少於10題執行
             i = i + 1
             questionLable.text = questions[i].description
+            //讓題目的選項順序不固定
             questions[i].options.shuffle()
+            //用迴圈把選項分配給Btn
             for j in 0...3{
                 optionBtns[j].setTitle(questions[i].options[j], for: .normal)
             }
             numberOfQuestionLable.text = "\(i + 1)/10"
             scoreLable.text = "總分：\(score)"
         }else{
+            //10題答完，跳出Alert，顯示分數和重新開始按鈕
             scoreLable.text = "總分：\(score)"
             let alert = UIAlertController(title: "猜題結束", message: "你得到\(score)/240分", preferredStyle: .alert)
             let replayAction = UIAlertAction(title: "重新開始", style: .default){_ in
@@ -81,18 +80,23 @@ class choiceQ_A: UIViewController {
         }
     }
     
-        
+    //選項按鈕
     @IBAction func option(_ sender: UIButton) {
+        //選擇的按鈕等於當前題目的答案時
         if sender.currentTitle == questions[i].ans{
+            //連續答對數+1
             rightCount += 1
+            //每題加10分，連續答對3題後每題+30分
             if rightCount < 4 {
                 score += 10
             }else{
                 score += 30
             }
         }else{
+            //答錯清零連續答對題數
             rightCount = 0
         }
+        //跳下一題
         nextQuestion()
     }
     

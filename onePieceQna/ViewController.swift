@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var questionLable: UILabel!
     @IBOutlet weak var answerLable: UILabel!
     @IBOutlet weak var luffyMessageLable: UILabel!
+    //建立Array儲存問題
     var questions = [Question]()
     var messages = ["要上囉～", "我要成為海賊王～", "成為我的夥伴吧～", "一起去冒險吧～"]
     var i = 0
@@ -39,21 +40,27 @@ class ViewController: UIViewController {
         questions.append(question9)
         let question10 = Question(description: "航海士娜美最喜歡的水果是什麼？", ans: "橘子")
         questions.append(question10)
+        //顯示目前是第幾題
         numberOfQuestionLable.text = "\(i + 1)/10"
         luffyMessageLable.text = messages.randomElement()
+        //將Array順序洗牌
         questions.shuffle()
+        //顯示題目
         questionLable.text = questions[i].description
     }
 
-    
+    //下一題按鈕
     @IBAction func next(_ sender: Any) {
+        //i+1除總題數，取餘數，餘數為0回到第一題
         i = (i + 1) % questions.count
+        //更新目前題數
         numberOfQuestionLable.text = "\(i + 1)/10"
         questionLable.text = questions[i].description
+        //先隱藏解答
         answerLable.text = ""
         luffyMessageLable.text = messages.randomElement()
     }
-    
+    //解答按鈕
     @IBAction func showAnswer(_ sender: Any) {
         answerLable.text = questions[i].ans
     }
